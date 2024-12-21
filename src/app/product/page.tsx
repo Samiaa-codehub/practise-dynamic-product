@@ -2,7 +2,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import ihpone from "../../../public/iphone.png"
-import vivo from ".././../../public/vivo.png"
 
 const detail=[
   {
@@ -33,12 +32,12 @@ const detail=[
 ]
 const Product = () => {
   return (
-    <div className='bg-blue-300 h-[100vh]'>
-        <h1 className='text-gray-600 text-center text-4xl mb-8'>Store house</h1>
-        <ul className='flex mt-8'>
+    <div className='bg-blue-300 h-[100%]'>
+        <h1 className='text-gray-600 text-center  text-3xl underline md:text-4xl mb-8'>Store house</h1>
+        <ul className='flex flex-col gap-8 mt-8'>
           {detail.map((items,index)=>
     
-          <li key={index} className='border w-auto py-4 px-2 ml-8 mx-auto items-center rounded-lg shadow-lg'>
+          <li key={index} className='border w-auto py-4 px-2 md:ml-8 mx-auto items-center rounded-lg shadow-lg'>
             <Link href={`${items.href}`}>
             <Image 
             src={ihpone}
